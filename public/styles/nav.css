@@ -6,4 +6,34 @@ nav {
   padding-right: 1.5em;
   padding-left: 1.5em;
   width: device-width;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  padding-top: 30px;
+  font-size: 40px;
+}
+
+.nav-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-right-top {
+  font-family: 'Source Sans Pro', sans-serif;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.nav-right-bottom {
+  color: red;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
