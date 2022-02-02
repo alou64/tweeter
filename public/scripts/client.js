@@ -71,11 +71,14 @@ const data = [
 
 
 
-// const $tweet = createTweetElement(data);
-//
-// $(document).ready(function() {
-//   $('.past-tweet').append($tweet);
-// });
 $(document).ready(function() {
   renderTweets(data);
+
+  // event listener for submit button
+  $('form').submit(function(event) {
+    event.preventDefault();    // prevent button from refreshing page
+    const tweet = $('#tweet-text').val();
+    console.log(tweet);
+  });
+
 });
