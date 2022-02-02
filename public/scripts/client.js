@@ -5,6 +5,14 @@
  */
 
 
+// escape function to prevent XSS attack
+const escape = str => {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
+
 // loop through tweets
 // call createTweetElement for each tweet
 // take return value and append to tweets container
@@ -30,7 +38,7 @@ const createTweetElement = data => {
         </div>
         <b class="username">${data.user.handle}</b>
       </header>
-      <p class="tweet">${data.content.text}</p>
+      <p class="tweet">${escape(data.content.text)}</p>
       <footer>
         <small>${timeago.format(data.created_at)}</small>
         <div class="tweet-icons">
@@ -55,7 +63,7 @@ $(document).ready(function() {
   // event listener for submit button
   $('form').submit(function(event) {
     event.preventDefault();    // prevent button from refreshing page
-renderTweets
+
     // check for empty input
     if ($('#tweet-text').val() === '') {
       alert('Enter a tweet');
@@ -69,6 +77,7 @@ renderTweets
     }
 
     const tweet = $(this).serialize();
+
     // send tweet to server
     $.post('/tweets/', tweet, function(data, status) {
       if (status === 'success') console.log('Tweet sent to server');
