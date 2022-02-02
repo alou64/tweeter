@@ -8,6 +8,7 @@ section.new-tweet {
   flex-direction: row;
   justify-content: space-between;
   padding-top: 10px;
+  border-top-style: solid;
 }
 
 button {
