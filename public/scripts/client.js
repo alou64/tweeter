@@ -77,8 +77,12 @@ $(document).ready(function() {
   // event listener for submit button
   $('form').submit(function(event) {
     event.preventDefault();    // prevent button from refreshing page
-    const tweet = $('#tweet-text').val();
-    console.log(tweet);
+    const tweet = $(this).serialize();
+    $.post('/tweets/', tweet, function(data, status) {
+      if (status === 'success') {
+        console.log('Tweet sent to server');
+      }
+    });
   });
 
 });
