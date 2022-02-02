@@ -65,14 +65,12 @@ small {
   font-size: 17px;
 }
 
-.tweet-icons {
-  padding-top: 5px;
-}
-
 article i {
+  padding-top: 5px;
   padding-left: 5px;
+  color: #000080;
 }
 
 article i:hover {
-  color: #000080;
+  color: #e1b100;
 }
