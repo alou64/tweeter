@@ -13,6 +13,14 @@ const escape = str => {
 };
 
 
+// callback for sliding alert
+const hideAlert = () => {
+  $('#submit-tweet').click(() => {
+    $('#tweet-alert').slideUp();
+  });
+};
+
+
 // loop through tweets
 // call createTweetElement for each tweet
 // take return value and append to tweets container
@@ -59,6 +67,8 @@ const createTweetElement = data => {
 // send appropriate alert
 
 $(document).ready(function() {
+  // hide alerts
+  $('#tweet-alert').hide();
 
   // event listener for submit button
   $('form').submit(function(event) {
@@ -66,13 +76,19 @@ $(document).ready(function() {
 
     // check for empty input
     if ($('#tweet-text').val() === '') {
-      alert('Enter a tweet');
+      // replace text in alert
+      $('#alert-text').text('Enter a tweet');
+      // slide down alert, slide up when button clicked
+      $('#tweet-alert').slideDown(300, hideAlert);
       return;
     }
 
     // validate character limit
     if ($('#tweet-text').val().length > 140) {
-      alert('Exceeded character limit');
+      // replace text in alert
+      $('#alert-text').text('Exceeded character limit');
+      // slide down alert, slide up when button clicked
+      $('#tweet-alert').slideDown(300, hideAlert);
       return;
     }
 
