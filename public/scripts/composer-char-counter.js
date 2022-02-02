@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(() => {
   console.log('ready!');
 
   $('#tweet-text').on('input', function(){

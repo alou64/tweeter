@@ -1,5 +1,6 @@
 article {
   border-style: solid;
+  margin-top: 50px;
 }
 
 article:hover {
@@ -11,7 +12,7 @@ article:hover {
 }
 
 .past-tweet {
-  margin-top: 50px;
+  /* margin-top: 50px; */
   width: 100%;
 }
 
