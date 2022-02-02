@@ -9,9 +9,11 @@
 // call createTweetElement for each tweet
 // take return value and append to tweets container
 const renderTweets = tweets => {
+  // emoty tweet area before loading tweets
+  $('#past-tweet').empty();
+
   for (const tweet of tweets) {
-    // const tweetElement = createTweetElement(tweet);
-    $('.past-tweet').append(createTweetElement(tweet));
+    $('#past-tweet').prepend(createTweetElement(tweet));
   }
 };
 
@@ -53,7 +55,7 @@ $(document).ready(function() {
   // event listener for submit button
   $('form').submit(function(event) {
     event.preventDefault();    // prevent button from refreshing page
-
+renderTweets
     // check for empty input
     if ($('#tweet-text').val() === '') {
       alert('Enter a tweet');
@@ -71,7 +73,12 @@ $(document).ready(function() {
     $.post('/tweets/', tweet, function(data, status) {
       if (status === 'success') console.log('Tweet sent to server');
     });
+
+    // clear text area and load the tweets
+    $('#tweet-text').val('');
+    loadTweets();
   });
+
 
   // fetch tweets server
   const loadTweets = function() {
