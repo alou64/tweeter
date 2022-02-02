@@ -3,16 +3,12 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-//
-// const $tweet = $(`<article>helloooo</article>`);
 
 
-// function takes in a tweet object
-// returns a tweet <article> element containing the entuire html structure of the tweet
 
-
+// returns tweet element containing entire html structure of tweet
 const createTweetElement = data => {
-  const markup = `
+  const $tweet = `
     <article>
       <div class="tweet-container">
       <header>
@@ -24,7 +20,7 @@ const createTweetElement = data => {
       </header>
       <p class="tweet">${data.content.text}</p>
       <footer>
-        <small>10 days ago</small>
+        <small>${timeago.format(data.created_at)}</small>
         <div class="tweet-icons">
           <i class="fas fa-flag"></i>
           <i class="fas fa-retweet"></i>
@@ -33,7 +29,7 @@ const createTweetElement = data => {
       </footer>
       </div>
     </article>`;
-  return markup;
+  return $tweet;
 };
 
 
@@ -49,15 +45,11 @@ const data = {
     "created_at": 1461116232227
  }
 
-//
-// createTweetElement(data);
+
+
+
 const $tweet = createTweetElement(data);
-// console.log($tweet);
-// $('.past-tweet').append($tweet);
 
 $(document).ready(function() {
   $('.past-tweet').append($tweet);
 });
-// $(document).ready(function() {
-//   createTweetElement(data);
-// });
