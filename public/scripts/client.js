@@ -43,26 +43,40 @@ const createTweetElement = data => {
 };
 
 
+
+// implement validation before sending form data to server
+// check for empty form and max message length
+// send appropriate alert
+
 $(document).ready(function() {
 
   // event listener for submit button
   $('form').submit(function(event) {
     event.preventDefault();    // prevent button from refreshing page
+
+    // check for empty input
+    if ($('#tweet-text').val() === '') {
+      alert('Enter a tweet');
+      return;
+    }
+
+    // validate character limit
+    if ($('#tweet-text').val().length > 140) {
+      alert('Exceeded character limit');
+      return;
+    }
+
     const tweet = $(this).serialize();
     // send tweet to server
     $.post('/tweets/', tweet, function(data, status) {
-      if (status === 'success') {
-        console.log('Tweet sent to server');
-      }
+      if (status === 'success') console.log('Tweet sent to server');
     });
   });
 
   // fetch tweets server
   const loadTweets = function() {
     $.get('http://localhost:8080/tweets', function(data, status) {
-      if (status === 'success') {
-        console.log('Fetched tweets from server');
-      }
+      if (status === 'success') console.log('Fetched tweets from server');
       renderTweets(data);
     });
   };
