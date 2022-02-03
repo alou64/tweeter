@@ -1,0 +1,19 @@
+@media only screen and (min-width: 1024px) {
+  .header-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 80px;
+  }
+
+  header {
+    width: 40%;
+    margin: 80px;
+  }
+
+  main {
+    width: 60%;
+    margin: 80px;
+  }
+}
