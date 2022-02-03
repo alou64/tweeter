@@ -1,3 +1,4 @@
+// update character count
 $(document).ready(function() {
   console.log('ready!');
 

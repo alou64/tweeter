@@ -1,3 +1,6 @@
+/* styling for desktop and tablet screen size */
+
+
 /* adjust for desktop size */
 @media only screen and (min-width: 1024px) {
   .header-main {
@@ -5,20 +8,17 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
-    /* margin: 80px; */
     margin: 3.33em;
   }
 
   .user-profile {
     width: 45%;
     margin: 3.33em;
-    /* margin: 80px; */
   }
 
   main {
     width: 55%;
     margin: 3.33em;
-    /* margin: 80px; */
   }
 }
 

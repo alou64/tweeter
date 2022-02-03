@@ -1,32 +1,39 @@
+/* styling for past tweets */
+
+
 article {
   border-style: solid;
   margin-top: 2.08em;
 }
 
+
 article:hover {
   box-shadow: 0.21em 0.21em 0em grey;
 }
+
 
 .tweet-container {
   padding: 0.63em;
 }
 
+
 .past-tweet {
-  /* margin-top: 50px; */
   width: 100%;
 }
+
 
 .past-tweet header {
   display: flex;
   justify-content: space-between;
-  padding-right: 0.21em;
-  padding-left: 0.21em;
+  padding: 0em 0.21em;
 }
+
 
 .past-tweet header img {
   width: 2.08em;
   margin-right: 0.42em;
 }
+
 
 .past-tweet header div {
   display: flex;
@@ -34,44 +41,46 @@ article:hover {
   align-items: center;
 }
 
+
 .username {
   color: grey;
   display: flex;
   align-items: center;
 }
 
+
 .tweet {
-  padding-top: 0.42em;
   font-weight: bold;
-  padding-right: 0.42em;
-  padding-left: 0.42em;
+  padding: 0.42em 0.42em 0 0.42em;
 }
+
 
 .past-tweet footer {
   border-top-style: solid;
 
 }
 
+
 .past-tweet footer {
-  padding-top: 0.42em;
-  padding-left: 0.42em;
-  padding-right: 0.42em;
+  padding: 0.42em 0.42em 0em 0.42em;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 
 small {
   font-weight: bold;
   font-size: 0.71em;
 }
 
+
 article i {
-  padding-top: 0.21em;
-  padding-left: 0.21em;
+  padding: 0.21em 0em 0em 0.21em;
   color: #4056A1;
 }
 
+
 article i:hover {
-  color: #ddbfff;
+  color: #DDBFFF;
 }
