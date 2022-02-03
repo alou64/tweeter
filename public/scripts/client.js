@@ -5,6 +5,23 @@
  */
 
 
+
+const alertTweet = message => {
+  // replace text in alert
+  $('#alert-text').text(message);
+
+  // slide down alert, slide up when button clicked
+  $('#tweet-alert').slideDown(300, () => {
+    $('#submit-tweet').click(() => {
+      $('#tweet-alert').slideUp();
+    });
+  });
+  return;
+};
+
+
+
+
 // escape function to prevent XSS attack
 const escape = str => {
   let div = document.createElement("div");
@@ -76,20 +93,12 @@ $(document).ready(function() {
 
     // check for empty input
     if ($('#tweet-text').val() === '') {
-      // replace text in alert
-      $('#alert-text').text('Enter a tweet');
-      // slide down alert, slide up when button clicked
-      $('#tweet-alert').slideDown(300, hideAlert);
-      return;
+      alertTweet('Enter a tweet');
     }
 
     // validate character limit
     if ($('#tweet-text').val().length > 140) {
-      // replace text in alert
-      $('#alert-text').text('Exceeded character limit');
-      // slide down alert, slide up when button clicked
-      $('#tweet-alert').slideDown(300, hideAlert);
-      return;
+      alertTweet('Exceeded character limit')
     }
 
     const tweet = $(this).serialize();
