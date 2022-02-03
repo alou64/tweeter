@@ -6,6 +6,8 @@
 html {
   box-sizing: border-box;
 }
+
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -14,8 +16,6 @@ html {
 /*
  * Global layout stuff
  */
-
-
 body {
   color: #545149;
   background-color: #f4f1ec;
