@@ -1,7 +1,8 @@
 nav {
   font-family: 'Bungee', sans-serif;
   background-color: #4056A1;
-  height: 120px;
+  height: 5em;
+  /* height: 120px; */
   color: #FFFFFF;
   padding-right: 1.5em;
   padding-left: 1.5em;
@@ -15,27 +16,32 @@ nav {
 }
 
 .nav-left {
-  padding-top: 30px;
-  font-size: 40px;
+  /* font-size: 40px; */
+  /* padding-top: 30px; */
+  padding-top: 0.75em;
+  font-size: 1.67em;
 }
 
 .nav-right {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 30px;
+  font-size: 1.25em;
+  /* font-size: 30px; */
 }
 
 .nav-right-top {
   font-family: 'Source Sans Pro', sans-serif;
-  height: 60px;
+  height: 2em;
+  /* height: 60px; */
   display: flex;
   align-items: flex-end;
 }
 
 .nav-right-bottom {
   color: red;
-  height: 60px;
+  height: 2em;
+  /* height: 60px; */
   display: flex;
   align-items: center;
   justify-content: center;

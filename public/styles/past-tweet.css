@@ -1,14 +1,14 @@
 article {
   border-style: solid;
-  margin-top: 50px;
+  margin-top: 2.08em;
 }
 
 article:hover {
-  box-shadow: 5px 5px 0px grey;
+  box-shadow: 0.21em 0.21em 0em grey;
 }
 
 .tweet-container {
-  padding: 15px;
+  padding: 0.63em;
 }
 
 .past-tweet {
@@ -19,13 +19,13 @@ article:hover {
 .past-tweet header {
   display: flex;
   justify-content: space-between;
-  padding-right: 5px;
-  padding-left: 5px;
+  padding-right: 0.21em;
+  padding-left: 0.21em;
 }
 
 .past-tweet header img {
-  width: 50px;
-  margin-right: 10px;
+  width: 2.08em;
+  margin-right: 0.42em;
 }
 
 .past-tweet header div {
@@ -41,10 +41,10 @@ article:hover {
 }
 
 .tweet {
-  padding-top: 10px;
+  padding-top: 0.42em;
   font-weight: bold;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-right: 0.42em;
+  padding-left: 0.42em;
 }
 
 .past-tweet footer {
@@ -53,9 +53,9 @@ article:hover {
 }
 
 .past-tweet footer {
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-top: 0.42em;
+  padding-left: 0.42em;
+  padding-right: 0.42em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -63,12 +63,12 @@ article:hover {
 
 small {
   font-weight: bold;
-  font-size: 17px;
+  font-size: 0.71em;
 }
 
 article i {
-  padding-top: 5px;
-  padding-left: 5px;
+  padding-top: 0.21em;
+  padding-left: 0.21em;
   color: #4056A1;
 }
 

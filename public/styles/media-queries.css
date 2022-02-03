@@ -5,17 +5,20 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
-    margin: 80px;
+    /* margin: 80px; */
+    margin: 3.33em;
   }
 
   .user-profile {
     width: 45%;
-    margin: 80px;
+    margin: 3.33em;
+    /* margin: 80px; */
   }
 
   main {
     width: 55%;
-    margin: 80px;
+    margin: 3.33em;
+    /* margin: 80px; */
   }
 }
 
@@ -28,12 +31,12 @@
   }
 
   .user-profile {
-    margin-top: 0px;
-    height: 500px;
-    margin-bottom: 30px;
+    margin-top: 0em;
+    height: 20.83em;
+    margin-bottom: 1.25em;
   }
 
   .user-profile img {
-    margin-top: 60px;
+    margin-top: 2.5em;
   }
 }
