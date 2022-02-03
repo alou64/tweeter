@@ -1,3 +1,4 @@
+/* adjust for desktop size */
 @media only screen and (min-width: 1024px) {
   .header-main {
     display: flex;
@@ -7,13 +8,32 @@
     margin: 80px;
   }
 
-  header {
-    width: 40%;
+  .user-profile {
+    width: 45%;
     margin: 80px;
   }
 
   main {
-    width: 60%;
+    width: 55%;
     margin: 80px;
+  }
+}
+
+
+/* adjust for tablet size */
+@media only screen and (max-width: 1024px) {
+  nav {
+    background-color: transparent;
+    position: absolute;
+  }
+
+  .user-profile {
+    margin-top: 0px;
+    height: 500px;
+    margin-bottom: 30px;
+  }
+
+  .user-profile img {
+    margin-top: 60px;
   }
 }

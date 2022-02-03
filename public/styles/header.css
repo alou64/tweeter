@@ -10,3 +10,7 @@
   background-color: #ddbfff;
   background-image: url("https://www.transparenttextures.com/patterns/escheresque.png");
 }
+
+.user-profile h2 {
+  margin: 0.4em; 
+}
