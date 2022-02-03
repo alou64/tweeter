@@ -1,6 +1,10 @@
+/* styling for new tweet */
+
+
 section.new-tweet {
   width: 100%;
 }
+
 
 .submit-count {
   font-family: 'Bungee', sans-serif;
@@ -11,6 +15,7 @@ section.new-tweet {
   border-top-style: solid;
 }
 
+
 button {
   background-color: #4056A1;
   color: #FFFFFF;
@@ -18,6 +23,7 @@ button {
   text-align: center;
   padding: 0.21em 0.42em;
 }
+
 
 textarea {
   border: none;
@@ -28,9 +34,11 @@ textarea {
   height: 1.46em;
 }
 
+
 .input-tweet {
   border-bottom-style: solid;
 }
+
 
 .tweet-alert {
   width: 100%;
@@ -42,6 +50,7 @@ textarea {
   display: flex;
   justify-content: space-around;
 }
+
 
 label {
   font-weight: bold;
