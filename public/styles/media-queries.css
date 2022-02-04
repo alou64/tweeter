@@ -8,12 +8,12 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
-    margin: 3.33em;
+    margin-top: 6em;
   }
 
   .user-profile {
     width: 45%;
-    margin: 3.33em;
+    margin: 3.33em 2em;
   }
 
   main {

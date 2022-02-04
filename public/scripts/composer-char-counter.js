@@ -11,5 +11,4 @@ $(document).ready(function() {
     }
     $('.counter').text(remainingChars);
   });
-
 });

@@ -1,5 +1,8 @@
 // handle get request
 const loadTweets = () => {
+  // hide alerts
+  $('#tweet-alert').hide();
+
   $.get('http://localhost:8080/tweets', function(data, status) {
     if (status === 'success') console.log('Fetched tweets from server');
     renderTweets(data);
@@ -11,7 +14,8 @@ const loadTweets = () => {
 const sendTweet = () => {
   // event listener for submit button
   $('form').submit(function(event) {
-    event.preventDefault();    // prevent button from refreshing page
+    // prevent button from refreshing page
+    event.preventDefault();
 
     // check for empty input
     if ($('#tweet-text').val() === '') {
@@ -21,7 +25,7 @@ const sendTweet = () => {
 
     // validate character limit
     if ($('#tweet-text').val().length > 140) {
-      alertTweet('Exceeded character limit')
+      alertTweet('Exceeded character limit');
       return;
     }
 
@@ -34,6 +38,6 @@ const sendTweet = () => {
       // clear text area and load the tweets
       $('#tweet-text').val('');
       loadTweets();
-    })
+    });
   });
 };

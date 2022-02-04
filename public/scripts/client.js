@@ -6,9 +6,6 @@
 
 
 $(document).ready(function() {
-  // hide alerts
-  $('#tweet-alert').hide();
-
   loadTweets();
   sendTweet();
 });
